@@ -213,6 +213,12 @@ exports.forgot=async(req,res)=>{
                     else{
                         return res.render('profile',{msg:"Deleted",msg_type:'good'});
                     }
+
+
+
+
+
+                    
                 })
             }catch(err){
                 console.log(err);
