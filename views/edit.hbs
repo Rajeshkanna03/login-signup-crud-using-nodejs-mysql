@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit</title>
+    <link rel="stylesheet" href="/css/edit.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="/image/amslogo.png" alt="amshuhu" width="80px" height="80px">
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h2>EDIT PROFILE</h2>
+        </div>
+        {{#if msg}}
+        <p class="{{msg_type}}">{{msg}}</p>
+        {{/if}}
+        <form action="/auth/edit" method="post" enctype="multipart/form-data">
+        <div class="edit">
+            <label for="#">Username</label>
+            <input type="text" name="username" placeholder="enter new name" id="nameedit">
+        </div>
+        <div class="img">
+            <label for="images">Image</label>
+            <input type="file" name="profileimage">
+            
+        </div>
+        <button type="submit">UPLOAD</button>
+        <br>
+       
+            <a href="/profile">Back to Profile</a>
+     
+        </form>
+    </div>
+    
+</body>
+</html>

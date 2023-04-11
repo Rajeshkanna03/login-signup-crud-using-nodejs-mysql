@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="/css/signup.css">
+    <script>function myfunction(){
+    const x=document.getElementById("password");
+    const y=document.getElementById("confirmpassword");
+    if(x.type==='password'){
+        x.type="text";
+    }
+    else{
+        x.type="password";
+    }
+    if(y.type==='password'){
+        y.type="text";
+    }
+    else{
+        y.type="password";
+    }
+    
+    
+}</script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    {{> navbar }}
+        <div class="container">
+        <div class="loginform">
+        <h2>CREATE NEW USER</h2>
+        </div> 
+        {{#if msg}}
+        <p class="{{msg_type}}">{{msg}}</p>
+        {{/if}}
+            <form class="form" action="/auth/signup" method="post" enctype="multipart/form-data" id="form">
+                <div class="inputfield">
+                    <div class="labeling">
+                    <label for="username" >Username</label>
+                </div>
+            <div class="input1">
+                    <input type="text" placeholder="enter name" name="username" id="username" >
+               </div>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i> 
+                    <small>errorMsg</small>    
+                </div>
+                <div class="inputfield">
+                    <div class="labeling">
+                    <label for="emailid" >Email</label>
+                </div>
+             <div class="input1">
+                    <input type="email" placeholder="enter email" name="emailid" id="emailid" >
+                </div>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>   
+                    <small>errorMsg</small>  
+                </div>
+                <div class="inputfield">
+                    <div class="labeling">
+                    <label for="password" >Password</label>
+                </div>
+               <div class="input1">
+                    <input type="password" placeholder="enter password" name="password" id="password" >
+                    </div>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>  
+                    <small>errorMsg</small>  
+                    
+                    <div class="showpassword">
+                        <label>Show Password</label>
+                        <input type="checkbox" onclick="myfunction()" id="showpassword" >
+                    </div> 
+                </div>
+                
+                <div class="inputfield">
+                    <div class="labeling">
+                    <label for="confirmpassword" >Confirm Password</label>
+                </div>
+               <div class="input1">
+                    <input type="password" placeholder="Re-enter password" name="confirmpassword" id="confirmpassword" >
+                    </div>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>  
+                    <small>errorMsg</small>   
+                </div>
+               
+                    <button type="submit" class="button" >Signup</button>
+                    <span>Already a user?<a href="/">login</a></span>
+            </form>
+    </div>
+    {{!-- <script src="/js/signup.js"></script> --}}
+    
+</body>
+</html>

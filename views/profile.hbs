@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+    {{> navbar }}
+    <div class="homecontain">
+        <h2>MY PROFILE</h2>
+        {{#if msg}}
+        <p class="{{msg_type}}">{{msg}}</p>
+        {{/if}}
+         <form action="/auth/profile" method="post"></form>
+        <div class="img">
+            {{#if user.PROFILEIMG}}
+            <img src="/uploads/{{user.PROFILEIMG}}" alt="user" width="100px" height="100px">
+            {{else}}
+            <img src="/image/amslogo.png" alt="userlogo" width="100px" height="100px">
+            {{/if}}
+        </div>
+        <h3>Name: {{#if user}}
+            {{user.NAME}}
+            {{else}}
+            {{user.ID}}
+            {{/if}}</h3>
+        <h3>Email: {{user.EMAIL}}</h3>
+        <a href="/edit">Edit</a>
+        <input type="hidden" name="del" >
+        <button type="submit" >Delete</button>
+    </form>
+    </div>
+    
+   
+</body>
+</html>
+

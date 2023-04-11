@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-image:url(back.jpg); */
+    background-color: rgb(46, 126, 126);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center; 
+}
+.logo{
+    padding-top: 5px;  
+}
+.loginform{
+    display: flex;
+    font-size: small;
+    justify-content: center;
+    margin: 6% auto;
+}
+.container{ 
+    left: 50%;
+    top: 50%;
+    width: 310px;
+    height: 400px;
+    margin-top: 25px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    /* background-color: rgb(46, 127, 255); */
+    background-color: rgb(15, 57, 65);
+    /* background-color: rgb(7, 82, 194); */
+    border: none;
+    color: rgb(238, 238, 227);
+} 
+.container2{ 
+    left: 50%;
+    top: 50%;
+    width: 320px;
+    height: 450px;
+    margin-top: 25px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    /* background-color: rgb(7, 82, 194); */
+    border: none;
+    /* background-color: rgb(46, 127, 255); */
+    background-color: rgb(15, 57, 65);
+    color: rgb(238, 238, 227);
+} 
+.form{
+    width: 300px;
+    height: 400px;
+    color: rgb(247, 247, 239);
+    padding-top: 10px;
+} 
+.inputfield{
+    display: flex;
+    justify-content:flex-end;
+    /* padding: .5rem; */
+    padding-bottom: 30px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.labeling{
+    flex: 1;
+    font-size: medium;
+    padding-left: 10px;
+}
+input{
+    width: 150px;
+    height: 20px;
+    flex: 2;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #000205;
+    color: rgb(241, 238, 238);
+    /* border-color: aqua; */
+    border-color: rgb(46, 126, 126);
+    cursor: pointer;
+}
+input:focus{
+    outline: none;
+    border-color: rgb(5, 1, 19);
+}
+.inputfield.success input{
+    border-color: rgb(3, 255, 3);
+}
+.inputfield.error input{
+    border-color: rgb(226, 15, 15);
+}
+.inputfield i{
+    visibility: hidden;
+    position: absolute;
+    padding-right: 5px;
+    padding-top: 3px;
+}
+.inputfield.success i.fa-check-circle{
+    color: rgb(3, 255, 3) ;
+    visibility: visible;
+}
+.inputfield.error i.fa-exclamation-circle{
+    color: rgb(219, 12, 12);
+    visibility: visible;   
+} 
+small{
+    /* color: rgb(94, 16, 16); */
+    color: rgb(77, 168, 161);
+    font-size: small;
+    padding-top: 25px;
+    position: absolute;
+    visibility: hidden;
+}
+.inputfield.error small{
+    visibility: visible;
+}
+.button  {
+    width: 60px;
+    font-size: medium;
+    padding: 10px;
+    border-radius: 10px;
+    border-radius: 4px;
+    background-color:rgb(46, 126, 126);
+    color: rgb(0, 15, 15);
+    border: none;
+    margin: 6% auto;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 80px;
+    transition: 0.5s;
+
+ }
+.button:hover {
+    box-shadow: 0px 0px 10px aqua;
+    background-color: aqua;
+    letter-spacing: 1.5px;
+}
+.form .newuser{
+    font-size:large;
+    justify-content: center;
+    display: flex;
+}
+.form span{
+    font-size:large;
+    justify-content: center;
+    display: flex;
+}
+
+.form .forgot{
+    display: flex;
+    margin-top: 30px;
+    width: 300px;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    font-size: medium;
+}
+.form a{
+    text-decoration: none;
+    color: rgb(0, 4, 8);
+  }
+  a:hover{
+    color: #d6ac16;
+  }
+.showpassword label{
+    float: right;
+    font-size: small;
+    margin-right: 10px;
+    margin-top: -10px;
+    display: flex;
+}
+.showpassword input{
+    cursor: pointer;
+    width: 15px;
+    margin-top: -10px;
+    margin-right: 7px;
+    float: right;
+    accent-color: black;
+}
+.newuser {
+    margin-top: 30px;
+    font-size: small;
+}
+.newuser a{
+    font-weight: bold;
+    font-size: medium;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(15, 57, 65);
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .brand{
+    font-weight: bolder;
+    font-size: 25px;
+    color: rgb(234, 239, 247);
+}/* margin-top: 25px; */
+nav .menu a{
+    margin: 10px 10px;
+    text-decoration: none;
+    color: aliceblue;
+}
+nav .menu a:hover{
+    color: rgb(199, 124, 13);
+}
+
+.container .error{
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+.container .good{
+    color: green;
+    text-align: center;
+    font-weight: bold;
+    
+}

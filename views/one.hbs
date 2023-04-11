@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="/css/one.css">
+    <script>
+        
+function myfunction(){
+    const x=document.getElementById("password");
+    if(x.type==='password'){
+        x.type="text";
+    }
+    else{
+        x.type="password";
+    }
+    
+    
+}
+
+    function setError(input, message){
+        const inputfield = input.parentElement;
+        const small = inputfield.querySelector('small');
+        inputfield.className = 'inputfield error';
+        small.innerText = message;
+    }
+    function setSuccess(input){
+       const inputfield=input.parentElement;
+       inputfield.className='inputfield success';
+
+    }
+
+
+
+        function myfunction(){
+    const x=document.getElementById("password");
+    const y=document.getElementById("confirmpassword");
+    if(x.type==='password'){
+        x.type="text";
+    }
+    else{
+        x.type="password";
+    }
+    if(y.type==='password'){
+        y.type="text";
+    }
+    else{
+        y.type="password";
+    }
+    
+    
+}
+    </script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    {{> navbar }}
+        <div class="container">
+        <div class="loginform">
+        <h2>LOGIN HERE</h2>
+        </div> 
+        {{#if msg}}
+        <p class="{{msg_type}}">{{msg}}</p>
+        {{/if}}
+            <form class="form" action="/auth/one" method="post" id="form">
+                <div class="inputfield">
+                    <div class="labeling">
+                    <label for="emailid">Email</label>
+                </div>
+             
+                    <input type="email" placeholder="enter email" name="emailid" id="emailid" >
+                
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>   
+                    <small>errorMsg</small>  
+                </div>
+                <div class="inputfield">
+                    <div class="labeling">
+                    <label for="password" >Password</label>
+                </div>
+               
+                    <input type="password" placeholder="enter password" name="password" id="password" >
+                    
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>  
+                    <small>errorMsg</small>   
+                </div>
+                <div class="showpassword">
+                    <label>Show Password</label>
+                    <input type="checkbox" onclick="myfunction()">
+                </div>
+                <div  class="forgot">
+
+                    <a href="/forgot">Forgot password?</a>
+
+                </div>
+                    <button type="submit" class="button">Login</button>
+                    <span class="newuser">New user?<a href="/signup">Signup</a></span>
+                
+            </form>
+    </div>
+     {{!-- <script src="/js/one.js"></script> --}}
+    
+</body>
+
+</html>
